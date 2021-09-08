@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    <div class="container-fluid">
+        <div class="row no-gutters justify-content-center mt-5">
+            <div class="col-12 col-lg-6 col-md-6">
+                <div>
+                    <div class="raw">
+                        <div class="col col-expand col-lg-9">
+                            <h1>{{ new.title }}</h1>
+                        </div>
+
+                        {% if new.photo %}
+                            <div class="col col-expand col-lg-9">
+                                <img src="{{ new.photo }}" style="max-width: 50%">
+                            </div>
+                        {% endif %}
+
+                        <div class="col col-expand col-lg-9">
+                            <p>{{ new.text }}</p>
+                        </div>
+                        <div class="col col-expand col-lg-9">
+                            <a href="{{ new.link }}">
+                                Перейти в новость на РБК
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
